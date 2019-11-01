@@ -2,16 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="2pt" >
+    android:layout_margin="0pt"
+    android:background="#C8C8CA"
+    android:id="@+id/RelativeLayout">
 
     <ImageView
         android:id="@+id/imagetop"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="120dp"
-        android:src="@drawable/calc_cover2"/>
+        android:src="@drawable/calc_cover2" />
 
     <EditText
         android:id="@+id/proses_layar"
+        android:background="#ffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imagetop"
@@ -23,17 +26,20 @@
 
     <TextView
         android:id="@+id/label"
+        android:background="#ffffff"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@+id/proses_layar"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:gravity="left"
         android:text="="
         android:textSize="12pt" />
     <EditText
         android:id="@+id/txt_layar"
+        android:backgroundTint="#ffffff"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:background="#ffffff"
         android:paddingTop="20sp"
         android:gravity="right"
         android:layout_toRightOf="@+id/label"
@@ -85,7 +91,7 @@
         android:layout_width="190dp"
         android:layout_height="60dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="556dp"
+        android:layout_marginTop="538dp"
 
         android:layout_marginBottom="50dp"
         android:text="C  "
@@ -215,6 +221,16 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="393dp"
+        android:background="#ffffff"
+        android:text="Dark Mode"
         android:textStyle="bold" />
 
 </RelativeLayout>
