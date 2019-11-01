@@ -1,26 +1,52 @@
 package com.example.calculator;
 
+        import android.graphics.Color;
         import android.os.Bundle;
         import java.text.NumberFormat;
+
+        import android.text.Layout;
         import android.view.View;
         import android.widget.Button;
+        import android.widget.CompoundButton;
         import android.widget.EditText;
+        import android.widget.RelativeLayout;
+        import android.widget.Switch;
 
+        import androidx.annotation.ColorInt;
         import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button one,two,three,four,five,six,sevenuh,eight,nine,zero,samadengan,bagi,kali,tambah,kurang,koma,clear;
+    Button one,two,three,four,five,six,sevenuh,eight,nine,zero,samadengan,bagi,kali,tambah,kurang,koma,clear,switch2;
     EditText txt_layar,proses_layar;
+    RelativeLayout layout;
     int op;
     double angka1, angka2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        layout = findViewById(R.id.RelativeLayout);
+        final Switch sw = findViewById(R.id.switch2);
+        sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    sw.setBackgroundColor(Color.rgb(33,39,66));
+                    sw.setTextColor(Color.rgb(200,200,200));
+                    layout.setBackgroundColor(Color.rgb(33,39,66));
+                } else {
+                    sw.setTextColor(Color.rgb(33,33,33));
+                    sw.setBackgroundColor(Color.rgb(237,237,243));
+                    layout.setBackgroundColor(Color.rgb(237,237,243));
+                }
+            }
+        });
+
         init();
+
     }
 
     public void init()
